@@ -1,0 +1,93 @@
+import { Link } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
+import logo from "../assets/logo.avif";
+
+export default function Navbar() {
+  const { user, logout } = useAuth();
+
+  return (
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="flex items-center justify-start h-[130px]">
+          {/* Logo */}
+          <Link to="/" className="flex items-center mr-12">
+            <img
+              src={logo}
+              alt="Doğum Sonu Bakım Paketi"
+              className="h-[150px] w-auto object-contain"
+            />
+          </Link>
+
+          {/* Menü */}
+          <div className="flex items-center space-x-12">
+            <Link
+              to="/"
+              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+            >
+              Ana Sayfa
+            </Link>
+
+            <Link
+              to="/about"
+              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+            >
+              Hakkında
+            </Link>
+
+            {user && (
+              <>
+                <Link
+                  to="/videos"
+                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                >
+                  Videolar
+                </Link>
+
+                <Link
+                  to="/survey"
+                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                >
+                  Anket
+                </Link>
+              </>
+            )}
+
+            <Link
+              to="/contact"
+              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+            >
+              İletişim
+            </Link>
+            {user?.role === "Admin" && (
+              <Link
+                to="/admin"
+                className="text-[15px] font-medium text-pink-600 hover:text-pink-700 transition-colors"
+              >
+                Admin Panel
+              </Link>
+            )}
+          </div>
+
+          {/* Sağ Auth */}
+          <div className="ml-auto">
+            {user ? (
+              <button
+                onClick={logout}
+                className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              >
+                Çıkış
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              >
+                Giriş
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
