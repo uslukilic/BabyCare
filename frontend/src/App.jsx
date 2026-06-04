@@ -16,7 +16,7 @@ import AdminStats from "./pages/admin/AdminStats";
 import AdminVideos from "./pages/admin/AdminVideos";
 import AdminSurvey from "./pages/admin/AdminSurvey";
 import AdminScaleResults from "./pages/admin/AdminScaleResults";
-import Chat from "./pages/Chat";
+import Chat from "./pages/chat";
 import FAQ from "./pages/FAQ";
 import ScaleAssessment from "./pages/ScaleAssessment";
 function App() {
