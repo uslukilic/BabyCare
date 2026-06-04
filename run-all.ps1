@@ -4,15 +4,20 @@ Usage: .\run-all.ps1 [-OpenBrowser]
 #>
 
 param(
-    [switch]$OpenBrowser
+    [switch]$OpenBrowser,
+    [switch]$UseNextBackend
 )
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$backendDir = Join-Path $root 'Backend'
+$backendDir = if ($UseNextBackend) { Join-Path $root 'backend-next' } else { Join-Path $root 'Backend' }
 $frontendDir = Join-Path $root 'frontend'
 
 # Start backend in new PowerShell window
-Start-Process powershell -ArgumentList "-NoExit","-Command","Set-Location -LiteralPath '$backendDir'; dotnet run"
+if ($UseNextBackend) {
+    Start-Process powershell -ArgumentList "-NoExit","-Command","Set-Location -LiteralPath '$backendDir'; npm run dev"
+} else {
+    Start-Process powershell -ArgumentList "-NoExit","-Command","Set-Location -LiteralPath '$backendDir'; dotnet run"
+}
 
 # Start frontend in new PowerShell window
 Start-Process powershell -ArgumentList "-NoExit","-Command","Set-Location -LiteralPath '$frontendDir'; npm run dev"

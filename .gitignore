@@ -17,6 +17,11 @@ node_modules/
 # video uploads
 Backend/wwwroot/videos/
 
+# local sqlite database
+Backend/app.db
+Backend/app.db-shm
+Backend/app.db-wal
+
 # IDE / env
 .vscode/
 .env
