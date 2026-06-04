@@ -12,7 +12,7 @@ import AdminLayout from "./components/AdminLayout";
 import Layout from "./components/Layout";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminContacts from "./pages/admin/AdminContacts";
-import AdminStats from "./pages/admin/ADminStats";
+import AdminStats from "./pages/admin/AdminStats";
 import AdminVideos from "./pages/admin/AdminVideos";
 import AdminSurvey from "./pages/admin/AdminSurvey";
 import AdminScaleResults from "./pages/admin/AdminScaleResults";
