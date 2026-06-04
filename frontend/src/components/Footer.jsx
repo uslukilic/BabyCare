@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.avif";
+import logo from "../assets/logo.avif.jpeg";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="Doğum Sonu Bakım Paketi"
-              className="h-16 mb-6"
+              className="h-12 md:h-16 mb-6 w-auto object-contain"
             />
 
             <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
@@ -58,9 +58,16 @@ export default function Footer() {
             <h4 className="text-gray-900 font-semibold mb-6">İletişim</h4>
 
             <ul className="space-y-4 text-sm text-gray-600">
-              <li>📍 İstanbul, Türkiye</li>
-              <li>📞 +90 5XX XXX XX XX</li>
-              <li>✉️ info@dogumsonubakim.com</li>
+              <li>
+                <span className="font-medium">Adres:</span> Yozgat Bozok Üniversitesi Erdoğan Akdağ Yerleşkesi Sağlık Bilimleri Fakültesi
+                <br />Atatürk Yolu 7. Km 66900 Merkez / YOZGAT
+              </li>
+              <li>
+                <span className="font-medium">Tel:</span> 5456281694
+              </li>
+              <li>
+                <span className="font-medium">E-posta:</span> dogumsonrasiegitim@gmail.com
+              </li>
             </ul>
           </div>
         </div>

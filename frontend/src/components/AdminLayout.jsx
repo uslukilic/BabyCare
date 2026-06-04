@@ -33,6 +33,9 @@ export default function AdminLayout() {
           <Link to="/admin/surveys" className={linkClass("/admin/surveys")}>
             Anketler
           </Link>
+          <Link to="/admin/scale-results" className={linkClass("/admin/scale-results")}>
+            Sağlık Ölçekleri
+          </Link>
           <Link to="/admin/stats" className={linkClass("/admin/stats")}>
             İstatistikler
           </Link>

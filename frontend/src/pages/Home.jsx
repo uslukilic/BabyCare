@@ -23,8 +23,9 @@ export default function Home() {
             </h1>
 
             <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-              Emeğinle ve ilginle annelik yolculuğunu şekillendirmeye hazır
-              mısın?
+              “Emeğinle ve ilginle annelik yolculuğunu şekillendirmeye hazır mısın?”
+Doğum sonu dönemin her aşamasında yanınızda olmak üzere hazırlanan Chatbot Destekli Web Tabanlı Doğum Sonrası Eğitim Programı; slayt sunumları, bilgilendirici videolar ve chatbot desteğini bir araya getirmektedir. Bu program sayesinde doğum sonu döneme ilişkin bilgi düzeyinizi artırabilir, bakım becerilerinizi geliştirebilir ve bu özel sürece daha güvenli, bilinçli ve rahat bir şekilde uyum sağlayabilirsiniz.
+
             </p>
           </div>
 

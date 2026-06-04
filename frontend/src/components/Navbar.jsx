@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
-import logo from "../assets/logo.avif";
+import logo from "../assets/logo.avif.jpeg";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -14,7 +14,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Doğum Sonu Bakım Paketi"
-              className="h-[150px] w-auto object-contain"
+              className="h-20 md:h-28 lg:h-36 w-auto object-contain"
             />
           </Link>
 
@@ -34,6 +34,20 @@ export default function Navbar() {
               Hakkında
             </Link>
 
+            <Link
+              to="/chat"
+              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+            >
+              Chat
+            </Link>
+
+            <Link
+              to="/faq"
+              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+            >
+              SSS
+            </Link>
+
             {user && (
               <>
                 <Link
@@ -48,6 +62,13 @@ export default function Navbar() {
                   className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
                 >
                   Anket
+                </Link>
+
+                <Link
+                  to="/scale-assessment"
+                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                >
+                  Sağlık Ölçekleri
                 </Link>
               </>
             )}
@@ -65,6 +86,7 @@ export default function Navbar() {
               >
                 Admin Panel
               </Link>
+              
             )}
           </div>
 

@@ -8,10 +8,11 @@ export default function About() {
             Hakkımızda
           </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Doğum sonrası dönem, annenin ve bebeğin fiziksel, duygusal ve sosyal
-            açıdan en hassas süreçlerinden biridir. Bu süreci güvenli ve
-            bilinçli şekilde yönetebilmek için bilimsel temelli destek
-            sunuyoruz.
+            Doğum sonu dönem (lohusalık), bebeğin doğmasıyla başlayan, gebelikte vücutta oluşan değişikliklerin gebelik öncesi haline döndüğü ve yaklaşık 6-8 hafta (40-42 gün) süren bir süreçtir. Bu dönemde fiziksel, sosyal ve duygusal değişimler yoğun olarak yaşanır; aile üyeleri ise yeni rollerine ve sorumluluklarına uyum sağlamaya çalışır. Nitelikli doğum sonu bakım hizmetlerine erişimin sınırlı olması, anne ve yenidoğan için çeşitli sağlık risklerini beraberinde getirebilir. Bu nedenle doğru bilgiye ve desteğe ulaşmak, sağlıklı bir başlangıç için kritik öneme sahiptir.
+Bu proje kapsamında geliştirilen Chatbot Destekli Web Tabanlı Doğum Sonrası Eğitim Programı; slayt sunumları, bilgilendirici videolar ve chatbot desteğini bir araya getirmektedir. Program annelerin bilgi düzeyini artırmayı, bakım becerilerini geliştirmeyi ve sürece uyumlarını kolaylaştırmayı hedeflemektedir.
+Program, doğum sonrası ilk 3 aylık döneme odaklanarak annelere güvenilir, bütüncül ve sürdürülebilir bir eğitim desteği sunmaktadır. 
+Sizler için faydalı olması dileğiyle…
+
           </p>
         </div>
       </section>

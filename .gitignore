@@ -1,0 +1,22 @@
+# .gitignore for BabyCare
+
+# .NET
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# appsettings (local secrets)
+Backend/appsettings.Development.json
+
+# frontend
+frontend/node_modules/
+node_modules/
+
+# video uploads
+Backend/wwwroot/videos/
+
+# IDE / env
+.vscode/
+.env

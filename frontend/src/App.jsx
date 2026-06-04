@@ -15,13 +15,20 @@ import AdminContacts from "./pages/admin/AdminContacts";
 import AdminStats from "./pages/admin/ADminStats";
 import AdminVideos from "./pages/admin/AdminVideos";
 import AdminSurvey from "./pages/admin/AdminSurvey";
+import AdminScaleResults from "./pages/admin/AdminScaleResults";
+import Chat from "./pages/Chat";
+import FAQ from "./pages/FAQ";
+import ScaleAssessment from "./pages/ScaleAssessment";
 function App() {
   return (
+    
     <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/faq" element={<FAQ />} />
 
           <Route
             path="/videos"
@@ -41,6 +48,15 @@ function App() {
             }
           />
 
+          <Route
+            path="/scale-assessment"
+            element={
+              <ProtectedRoute>
+                <ScaleAssessment />
+              </ProtectedRoute>
+            }
+          />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route
@@ -55,6 +71,7 @@ function App() {
             <Route path="contacts" element={<AdminContacts />} />
             <Route path="videos" element={<AdminVideos />} />
             <Route path="surveys" element={<AdminSurvey />} />
+            <Route path="scale-results" element={<AdminScaleResults />} />
             <Route path="stats" element={<AdminStats />} />
           </Route>
         </Routes>

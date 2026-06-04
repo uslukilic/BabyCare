@@ -23,5 +23,6 @@ namespace Backend.Data
         public DbSet<SurveyOption> SurveyOptions { get; set; }
         public DbSet<SurveyVote> SurveyVotes { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<ScaleResponse> ScaleResponses { get; set; }
     }
 }

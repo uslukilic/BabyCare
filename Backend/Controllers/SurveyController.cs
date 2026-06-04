@@ -2,6 +2,7 @@ using Backend.Data;
 using Backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Backend.Controllers
@@ -125,5 +126,52 @@ namespace Backend.Controllers
 
             return Ok(survey);
         }
+
+        // 📝 Ölçek yanıtlarını kaydet
+        [Authorize]
+        [HttpPost("scale-response")]
+        public IActionResult SaveScaleResponse([FromBody] SaveScaleResponseDto dto)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var response = new ScaleResponse
+            {
+                UserId = userId,
+                ScaleId = dto.ScaleId,
+                ResponseData = System.Text.Json.JsonSerializer.Serialize(dto.Responses),
+                CreatedAt = DateTime.Now
+            };
+
+            _context.ScaleResponses.Add(response);
+            _context.SaveChanges();
+
+            return Ok(new { message = "Yanıtlar kaydedildi", id = response.Id });
+        }
+
+        // 📊 Ölçek sonuçlarını getir (Admin)
+        [Authorize(Roles = "Admin")]
+        [HttpGet("scale-results/{scaleId}")]
+        public IActionResult GetScaleResults(string scaleId)
+        {
+            var responses = _context.ScaleResponses
+                .Where(x => x.ScaleId == scaleId)
+                .Include(x => x.User)
+                .Select(x => new
+                {
+                    x.Id,
+                    UserName = $"{x.User!.FirstName} {x.User.LastName}",
+                    x.CreatedAt,
+                    Responses = x.ResponseData
+                })
+                .ToList();
+
+            return Ok(responses);
+        }
+    }
+
+    public class SaveScaleResponseDto
+    {
+        public string ScaleId { get; set; } = string.Empty;
+        public Dictionary<int, int> Responses { get; set; } = new();
     }
 }

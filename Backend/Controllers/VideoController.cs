@@ -20,6 +20,8 @@ namespace Backend.Controllers
 
         // 🔒 Admin video yükler
         [Authorize(Roles = "Admin")]
+        [DisableRequestSizeLimit]
+        [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue)]
         [HttpPost("upload")]
         public IActionResult Upload([FromForm] VideoUploadDto dto)
         {
