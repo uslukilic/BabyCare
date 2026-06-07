@@ -44,11 +44,14 @@ namespace Backend.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login(string email, string password)
+        public IActionResult Login(LoginDto dto)
         {
-            var hash = PasswordHasher.Hash(password);
+            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                return BadRequest("Email ve şifre gereklidir.");
+
+            var hash = PasswordHasher.Hash(dto.Password);
             var user = _context.Users
-                .FirstOrDefault(x => x.Email == email && x.PasswordHash == hash);
+                .FirstOrDefault(x => x.Email == dto.Email && x.PasswordHash == hash);
 
             if (user == null)
                 return Unauthorized();
