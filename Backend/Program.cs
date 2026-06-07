@@ -63,7 +63,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 var frontendOrigins = new[]
 {
     "http://localhost:5173",
-    "https://chocolate-hare-298673.hostingersite.com"
+    "https://chocolate-hare-298673.hostingersite.com",
+    "https://lightblue-horse-121787.hostingersite.com"
 };
 
 builder.Services.AddCors(options =>
