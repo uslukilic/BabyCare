@@ -26,27 +26,27 @@ export default function Footer() {
 
             <ul className="space-y-4 text-sm text-gray-600">
               <li>
-                <Link to="/" className="hover:text-pink-600 transition">
+                <Link to="/" className="hover:text-primary-600 transition">
                   Ana Sayfa
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-pink-600 transition">
+                <Link to="/about" className="hover:text-primary-600 transition">
                   Hakkında
                 </Link>
               </li>
               <li>
-                <Link to="/videos" className="hover:text-pink-600 transition">
+                <Link to="/videos" className="hover:text-primary-600 transition">
                   Videolar
                 </Link>
               </li>
               <li>
-                <Link to="/survey" className="hover:text-pink-600 transition">
+                <Link to="/survey" className="hover:text-primary-600 transition">
                   Anket
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-pink-600 transition">
+                <Link to="/contact" className="hover:text-primary-600 transition">
                   İletişim
                 </Link>
               </li>

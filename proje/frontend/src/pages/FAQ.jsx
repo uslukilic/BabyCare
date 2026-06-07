@@ -79,7 +79,7 @@ export default function FAQ() {
                 className="w-full text-left px-6 py-4 flex justify-between items-center"
               >
                 <span className="font-medium text-gray-900">{item.q}</span>
-                <span className="text-pink-600">{open === idx ? "–" : "+"}</span>
+                <span className="text-primary-600">{open === idx ? "–" : "+"}</span>
               </button>
 
               {open === idx && (

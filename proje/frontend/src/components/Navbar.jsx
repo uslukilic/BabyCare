@@ -22,28 +22,28 @@ export default function Navbar() {
           <div className="flex items-center space-x-12">
             <Link
               to="/"
-              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
             >
               Ana Sayfa
             </Link>
 
             <Link
               to="/about"
-              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
             >
               Hakkında
             </Link>
 
             <Link
               to="/chat"
-              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
             >
               Chat
             </Link>
 
             <Link
               to="/faq"
-              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
             >
               SSS
             </Link>
@@ -52,21 +52,21 @@ export default function Navbar() {
               <>
                 <Link
                   to="/videos"
-                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                  className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
                 >
                   Videolar
                 </Link>
 
                 <Link
                   to="/survey"
-                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                  className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
                 >
                   Anket
                 </Link>
 
                 <Link
                   to="/scale-assessment"
-                  className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                  className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
                 >
                   Sağlık Ölçekleri
                 </Link>
@@ -75,18 +75,18 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+              className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
             >
               İletişim
             </Link>
             {user?.role === "Admin" && (
               <Link
                 to="/admin"
-                className="text-[15px] font-medium text-pink-600 hover:text-pink-700 transition-colors"
+                className="text-[15px] font-medium text-primary-600 hover:text-primary-700 transition-colors"
               >
                 Admin Panel
               </Link>
-              
+
             )}
           </div>
 
@@ -95,14 +95,14 @@ export default function Navbar() {
             {user ? (
               <button
                 onClick={logout}
-                className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
               >
                 Çıkış
               </button>
             ) : (
               <Link
                 to="/login"
-                className="text-base font-medium text-gray-900 hover:text-pink-600 transition-colors"
+                className="text-base font-medium text-gray-900 hover:text-primary-600 transition-colors"
               >
                 Giriş
               </Link>

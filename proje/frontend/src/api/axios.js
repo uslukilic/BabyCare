@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5222/api", // backend portunu kontrol et
+  baseURL:
+    import.meta.env.VITE_API_URL || "http://localhost:5222/api",
 });
 
 api.interceptors.request.use((config) => {

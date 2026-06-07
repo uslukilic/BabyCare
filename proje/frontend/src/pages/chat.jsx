@@ -67,7 +67,7 @@ export default function Chat() {
             className={
               msg.role === "bot"
                 ? "text-left bg-gray-100 rounded-2xl p-4"
-                : "text-right bg-pink-100 rounded-2xl p-4"
+                : "text-right bg-primary-50 rounded-2xl p-4"
             }
           >
             {msg.text}
@@ -81,7 +81,7 @@ export default function Chat() {
               key={question}
               type="button"
               onClick={() => sendQuickQuestion(question)}
-              className="rounded-full border border-pink-600 px-4 py-2 text-sm text-pink-700 hover:bg-pink-50"
+              className="rounded-full border border-primary-600 px-4 py-2 text-sm text-primary-700 hover:bg-primary-50"
             >
               {question}
             </button>
@@ -93,11 +93,11 @@ export default function Chat() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Sorunuzu yazın..."
-          className="flex-1 border border-gray-300 rounded-full px-5 py-3 focus:outline-none focus:border-pink-500"
+          className="flex-1 border border-gray-300 rounded-full px-5 py-3 focus:outline-none focus:border-primary-500"
         />
         <button
           type="submit"
-          className="bg-pink-600 text-white rounded-full px-6 py-3 hover:bg-pink-700"
+          className="bg-primary-600 text-white rounded-full px-6 py-3 hover:bg-primary-700"
             disabled={loading}
         >
             {loading ? "Gönderiliyor..." : "Gönder"}
